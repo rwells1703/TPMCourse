@@ -161,7 +161,7 @@ y: 2f8f5405f185d2077578f5861af011d0298a067471711ef24db4e7cf8ad5c382
 
 Note, it is possible to change the seeds of the platform and endorsement hierarchies using the commands `tpm2_changepps` and `tpm2_changeeps`. These commands are not in the version of the tools supplied by the tutorial and not all TPMs necessarily support changing of these seeds.
 
-If the seed is changed the it will effectively sender the primary key for that hierarhcy and all keys under than hierarchy useless. You can figure out the potential for data loss yourselves.
+If the seed is changed the it will effectively render the primary key for that hierarchy and all keys under than hierarchy useless. You can figure out the potential for data loss yourselves.
 
 
 ## Creating Keys
@@ -262,7 +262,7 @@ ERROR: Unable to run tpm2_evictcontrol
 To remove the key the process is such
 
 ```bash
-$ tpm2_evictcontrol 0x81010004
+$ tpm2_evictcontrol -c 0x81010004
 $ tpm2_getcap handles-persistent
 ```
 
